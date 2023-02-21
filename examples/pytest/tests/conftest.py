@@ -1,4 +1,5 @@
 import pytest
+from pathlib import Path
 
 @pytest.fixture(scope="session")
 def tmp_file(tmpdir_factory) -> str:
@@ -20,3 +21,10 @@ def tmp_file(tmpdir_factory) -> str:
     """
     tmp_file = tmpdir_factory.mktemp("pytest_dir").join("tmp.txt")
     return str(tmp_file)
+
+
+@pytest.fixture(scope="session")
+def data_txt() -> str:
+    dir = Path(__file__).parent
+    data_dir = dir.joinpath("data")
+    return str(data_dir.joinpath("data.txt"))

@@ -47,3 +47,10 @@ def test_file(tmp_file):
     """
     print(tmp_file)
     assert isinstance(tmp_file, str)
+
+
+def test_data_file(data_txt):
+    print(data_txt)
+    with open(data_txt, mode="r", encoding="utf-8") as file:
+        print(file.read())
+    assert True
