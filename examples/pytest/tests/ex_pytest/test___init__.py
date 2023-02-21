@@ -1,5 +1,5 @@
 import pytest
-import example_pytest as ex
+import ex_pytest as ex
 
 # a, b　の値を組み合わせてテスト
 @pytest.mark.parametrize("a", [1, 2, 3, 0])
