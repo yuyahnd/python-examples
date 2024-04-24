@@ -19,7 +19,7 @@ testpaths = [
 [pytest]
 pythonpath = src
 testpaths = 
-    test
+    tests
     integration
 ```
 
